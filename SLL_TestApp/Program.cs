@@ -52,6 +52,8 @@ namespace SLL_TestApp
       Helicopter c = new Helicopter(1);
 
       var heliExist = helis.Contains(c);
+      var helicount = helis.Count();
+      var heli1 = helis.FindByIndex(1);
 
       Console.Read();
 
