@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -108,16 +109,27 @@ namespace SinglyLinkedList
             {
                 counter++;
             }
-
+            
             return counter;
         }
 
         public void Clear()
         {
-            for (Node<T> i = m_head; i != null; i = i.m_next)
-            {
+            // Pointer to Next Node
+            Node<T> next_Node = null;
 
+            for (Node<T> i = m_head; i != null; i = next_Node)
+            {   
+                // Safe the pointer to the next node
+                next_Node = i.m_next;
+
+                // Delete the current Node
+                i.m_next = null;
+                i.m_data = default(T);
             }
+
+            // Reset internal Counter
+            m_cnt = 0;
         }
     }
 }
