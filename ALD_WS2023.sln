@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinglyLinkedList", "SinglyL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLL_TestApp", "SLL_TestApp\SLL_TestApp.csproj", "{34AA768E-C5A9-44FB-9D7A-D10862BFA3C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLL_TestApplication", "SLL_TestApplication\SLL_TestApplication.csproj", "{8E61A65B-4C4A-4A39-A49C-D80FC74C037E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{34AA768E-C5A9-44FB-9D7A-D10862BFA3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34AA768E-C5A9-44FB-9D7A-D10862BFA3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34AA768E-C5A9-44FB-9D7A-D10862BFA3C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E61A65B-4C4A-4A39-A49C-D80FC74C037E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E61A65B-4C4A-4A39-A49C-D80FC74C037E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E61A65B-4C4A-4A39-A49C-D80FC74C037E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E61A65B-4C4A-4A39-A49C-D80FC74C037E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

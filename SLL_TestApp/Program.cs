@@ -74,9 +74,6 @@ namespace SLL_TestApp
 
             // Test Clear Method
             helis.Clear();
-
-            Console.Read();
-
         }
     }
 }
