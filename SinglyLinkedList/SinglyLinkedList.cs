@@ -103,33 +103,17 @@ namespace SinglyLinkedList
 
         public int Count()
         {
-            int counter = 0;
-
-            for (Node<T> i = m_head; i != null; i = i.m_next)
-            {
-                counter++;
-            }
-            
-            return counter;
+            return m_cnt;
         }
 
         public void Clear()
         {
-            // Pointer to Next Node
-            Node<T> next_Node = null;
-
-            for (Node<T> i = m_head; i != null; i = next_Node)
-            {   
-                // Safe the pointer to the next node
-                next_Node = i.m_next;
-
-                // Delete the current Node
-                i.m_next = null;
-                i.m_data = default(T);
-            }
-
             // Reset internal Counter
             m_cnt = 0;
+
+            // Reset Pointers to First and Last element
+            m_head = null;
+            m_last = null;
         }
     }
 }
