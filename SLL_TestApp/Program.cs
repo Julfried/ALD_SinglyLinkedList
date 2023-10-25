@@ -37,6 +37,11 @@ namespace SLL_TestApp
             myList.Add(3);
             myList.Add(4);
 
+            foreach (int i in myList)
+            {
+                Console.WriteLine(i);
+            }
+
             // Test Contains Method
             bool exist = myList.Contains(3);
 
@@ -74,6 +79,8 @@ namespace SLL_TestApp
 
             // Test Clear Method
             helis.Clear();
+
+            Console.ReadLine();
         }
     }
 }

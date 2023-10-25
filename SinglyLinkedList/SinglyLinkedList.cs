@@ -22,11 +22,17 @@ namespace SinglyLinkedList
         public T m_data { get; set; }
     }
 
-    public class SinglyLinkedList<T>
+    public class SinglyLinkedList<T> : IEnumerable, IEnumerator<T>
     {
         Node<T> m_head { get; set; }
         Node<T> m_last { get; set; }
         int m_cnt { get; set; }
+
+        private Node<T> m_currentNode;
+
+        public object Current { get { return Current; } }
+
+        T IEnumerator<T>.Current { get { return m_currentNode.m_data; } }
 
         public void Add(T item)
         {
@@ -116,6 +122,43 @@ namespace SinglyLinkedList
             // Reset Pointers to First and Last element
             m_head = null;
             m_last = null;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return this;
+        }
+
+        public bool MoveNext()
+        {
+            // If List is empty ==> return false
+            if (m_head == null)
+            {
+                return false;
+            }
+
+            // Current Node null ==> first Iteration
+            if (m_currentNode == null) 
+            {
+                m_currentNode = m_head;
+                return true;
+            }
+
+            // Get Next Node
+            m_currentNode = m_currentNode.m_next;
+
+            //If CurrentNode is last element ==> return false
+            return m_currentNode != null;
+        }
+
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            // Nothing todo in here
         }
     }
 }
