@@ -87,18 +87,20 @@ namespace SinglyLinkedList
         public T FindByIndex(int index)
         {
             int counter = 0;
-            T returnnode = default(T);
 
-            for (Node<T> i = m_head; i != null; i = i.m_next)
+            if(index < m_cnt)
             {
-                if (index == counter)
+                for (Node<T> i = m_head; i != null; i = i.m_next)
                 {
-                    returnnode = i.m_data;
+                    if (index == counter)
+                    {
+                        return i.m_data;
+                    }
+                    counter++;
                 }
-                counter++;
             }
 
-            return returnnode;
+            throw new IndexOutOfRangeException("index");
         }
 
         public int Count()
